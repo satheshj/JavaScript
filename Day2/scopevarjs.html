@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope of Variable</title>
+    <script>
+
+         // Global scope
+         var v2 = 4;
+        // Local Scope and function scope
+        function myfun(){
+            var v1 = "Lexus";
+            x = "hi";
+            document.write(v1+"<br>");
+            document.writeln(v2); //global variable
+            console.log(v1);
+        }
+        console.log(x);
+        myfun();
+        console.log(v1);// cannot be accessed(local and function)
+        //block scope(use only let and constants)
+        {
+            var a = "bmw";
+            const b1 = 5;
+            console.log(b1);
+            let c = "jia";
+            console.log(c);
+        }
+        console.log(a);// as it is var it will be printed
+        console.log(b1);// cannot be accessed outside the block
+        //var
+        var nova = 0;
+        {
+            var nova = 9;
+            console.log(nova) // 9 redeclartion
+        }
+        nova = 76;
+        console.log(nova); // 76 updation
+        mark = 1200;
+        console.log(mark);
+        var mark; //hoisting possible
+        //let
+        let nova;
+        {
+            let nova = 9;
+            console.log(nova) // error
+        }
+        nova = 76;// 76 updation
+        console.log(nova); // 76 updation
+        nova1=4;
+        console.log(nova1);
+        let nova1; // hoisting is not possible
+        
+    </script>
+</head>
+    <body>
+        <!-- <button onclick="myfun()">Print</button> -->
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width">
+        <script>
+            function profile(){
+                var x = prompt("Enter your m1 mark");
+                var y = prompt("Enter your m2 mark");
+                var z = prompt("Enter your m3 mark");
+                var m1 = parseInt(x);
+                var m2 = parseInt(y);
+                var m3 = parseInt(z);
+                document.getElementById("pName").innerHTML="Name : Sathesh J";
+                document.getElementById("pAge").innerHTML="Age : 22";
+                document.getElementById("pQual").innerHTML="Qualification : B.E - C.S.E";
+                document.getElementById("pm1").innerHTML="Mark : "+m1;
+                document.getElementById("pm2").innerHTML="Mark : "+m2;
+                document.getElementById("pm3").innerHTML="Mark : "+m3;
+                document.getElementById("ptotal").innerHTML="Total : "+(m1+m2+m3);
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Profile</h1>
+        <button onclick="profile()">Sathesh's profile</button>
+        <p id="pName"></p>
+        <p id="pAge"></p>
+        <p id="pQual"></p>
+        <p id="pm1"></p>
+        <p id="pm2"></p>
+        <p id="pm3"></p>
+        <p id="ptotal"></p>
+    </body>
+</html>
