@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dynamic HTML</title>
+        <script>
+            function generate(){
+                var data = "Enter your name:<input type = 'text'><br>Comments: <textarea></textarea><br><button>Submit</button>";
+                document.getElementById("myFeedback").innerHTML = data;
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="generate()">Generate</button>
+        <div id="myFeedback"></div>
+    </body>
+</html>
