@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dyanamic login Page</title>
+    </head>
+    <body>
+        <button onclick="dynLogin()">Login</button>
+        <script>
+            function dynLogin(){
+                var dyn_div = document.createElement("div");
+                var dyn_loginText = document.createTextNode("Login Page");
+                var dyn_input = document.createElement("input");
+                var dyn_button = document.createElement("button");
+                var dyn_buttonText = document.createTextNode("Click");
+                dyn_input.type = "text";
+                document.body.appendChild(dyn_div);
+                dyn_div.appendChild(dyn_loginText);
+                dyn_div.appendChild(dyn_input);
+                dyn_div.appendChild(dyn_button);
+                dyn_button.appendChild(dyn_buttonText);
+            }
+        </script>
+    </body>
+</html>

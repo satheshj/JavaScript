@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnMouseOver + onmouseout</title>
+</head>
+<body>
+    <h1 id="head1" onmouseover="change()" onmouseout="mouseover()">onmouseover + onmouseout method</h1>
+    <script>
+        function change(){
+            document.getElementById("head1").style.backgroundColor = "aqua";
+            document.getElementById("head1").style.color = "white";
+            document.getElementById("head1").style.fontSize = "50px";
+            document.getElementById("head1").textContent= "Suuuuuuuuuuuiiiiiiiiiii";
+
+        }
+        function mouseover(){
+            document.getElementById("head1").style.backgroundColor = "grey";
+            document.getElementById("head1").style.color = "black";
+            document.getElementById("head1").style.fontSize = "70px";
+            document.getElementById("head1").textContent= "Krishna ronaldo";
+
+        }
+    </script>
+</body>
+</html>

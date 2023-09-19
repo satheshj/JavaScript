@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On blur event</title>
+</head>
+<body>
+    <label>Enter the name:</label>
+    <input type="text" onblur="validate(this)">
+    <script>
+        function validate(bIn){
+            // document.write(bIn.value.length);
+            if(bIn.value.length == 0){
+                alert("Please enter your name");
+            } else if(bIn.value.length >= 8){
+                alert("Length " + bIn.value.length);
+            } else{
+                alert("Please enter more characters");
+            }
+        }
+    </script>
+</body>
+</html>
