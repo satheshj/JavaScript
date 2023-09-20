@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Qualifications</title>
+    </head>
+    <body>
+        <section>
+            <script>
+                function studentData(){
+                    var htag = document.createElement("h1");
+                    var htext = document.createTextNode("Sathesh Jaganathan");
+                    var h2Qual = document.createElement("h2");
+                    var h2QualText = document.createTextNode("B.E - C.S.E");
+                    var para = document.createElement("p");
+                    var paraText = document.createTextNode("I'm a student who is learning Full Stack Development");
+                    var dyDiv = document.createElement("div");
+                    dyDiv.appendChild(htag,h2Qual,para);
+                    htag.appendChild(htext);
+                    h2Qual.appendChild(h2QualText);
+                    para.appendChild(paraText);
+                }
+            </script>
+            <button onclick="studentData()">Student Data</button>
+        </section>
+    </body>
+</html>

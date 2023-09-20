@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <a href = "google.com" target="_blank" id="a1">hello</a>
+        <button onclick="setAtt()">attributes</button>
+        <script>
+            function setAtt(){
+                var attribute = document.getElementById("a1").getAttribute("href");
+                document.getElementById("a1").removeAttribute("target");
+                document.getElementById("a1").setAttribute("target","_blank"); 
+            }
+        </script>
+    </body>
+</html>

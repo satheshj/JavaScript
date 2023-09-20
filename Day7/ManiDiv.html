@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create Div</title>
+    </head>
+    <body>
+        <button onclick="dynamicdiv()">Click</button>
+        <script>
+            function dynamicdiv(){
+                // var newDiv = document.createElement("div");
+                var text1 = document.createTextNode("Hello World");
+                var htag = document.createElement("center");
+                // newDiv.appendChild(htag);
+                htag.appendChild(text1);
+                document.body.appendChild(htag);
+                
+            }
+        </script>
+    </body>
+</html>
