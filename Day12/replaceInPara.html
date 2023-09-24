@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Replace word</title>
+
+    </head>
+    <body>
+        <section>
+            <p>
+                Please enter your paragraph <br/>
+                <textarea id="repPara"></textarea>    
+            </p>
+            <input type="text" placeholder="enter the word to be replaced" id = "input">
+            <input type="text" placeholder="Enter the word to be replaced" id = "replace">
+            <button onclick="check()">Submit</button>
+            <div id = "replacedPara">
+
+            </div>
+        </section>
+        <script>
+            function check(){
+                var para = document.getElementById("repPara").value;
+                var replace_word = document.getElementById("replace").value;
+                var old_word = document.getElementById("input").value;
+                para = para.replaceAll(old_word, replace_word);
+                document.getElementById("replacedPara").textContent = para;
+            }
+        </script>
+    </body>
+</html>
