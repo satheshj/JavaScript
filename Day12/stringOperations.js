@@ -1,6 +1,12 @@
 //Quotes in String
 var str = "Mark\'s son";
 var s1 = "\"Hello World!\"";
+var s2 = `Hello World
+I am studying full Stack Development
+2023`;
+console.log(s2);//Hello World
+                // I am studying full Stack Development
+                // 2023
 
 //length is a property to find the length of string,array,etc
 console.log(s1.length); //14
