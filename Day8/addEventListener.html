@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="submit">
+        <input type="reset">
+        <select>
+            <option>Select an option</option>
+            <option value="bike">Bike</option>
+            <option value="car">Car</option>
+            <option value="truck">Truck</option>
+        </select>
+    </form>
+    <script>
+        // function resetWarning(){
+        //     alert("Confirm to reset the data");
+        // }
+
+
+        let formEle = document.querySelector('form');
+        formEle.addEventListener('reset',function(){
+            alert("Are you sure to reset the value");
+        })//displays alert box when user resets the form
+
+
+        formEle.addEventListener('submit',() =>{
+            alert("Are you sure that you wanna submit the form");
+            
+        })// displays alert box when user submits
+
+
+        document.querySelector('#name').addEventListener("keydown",function (e){
+            console.log(e);
+            document.querySelector('#name').style.backgroundColor = "red";
+        })// returns value of the key pressed
+
+
+        // document.querySelector('select').addEventListener('change',function (){
+        //     alert(document.querySelector('select').value);
+        // })// alerts user when user changes option
+
+        function change(){
+            alert(document.querySelector('select').value);
+        }
+        document.querySelector('select').addEventListener('change',change()); // while loading itself the function is called not on option change event //Select an option
+
+        //inorder to pass predefined in a call back function use function name without () or else use anonymous function or arrow function
+        
+    </script>
+</body>
+</html>
