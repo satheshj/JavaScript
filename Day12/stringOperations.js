@@ -3,10 +3,17 @@ var str = "Mark\'s son";
 var s1 = "\"Hello World!\"";
 var s2 = `Hello World
 I am studying full Stack Development
-2023`;
+2023`; // `` - template litreals = supports multiline strings and supports operation with help of $ operator
+var s3 = `This is sathesh
+        I'm not batman
+            1+1 is ${1+1}`;
+console.log(s3);//This is sathesh
+//                        I'm not batman
+//                             1+1 is 2
+
 console.log(s2);//Hello World
-                // I am studying full Stack Development
-                // 2023
+                //I am studying full Stack Development
+                //2023
 
 //length is a property to find the length of string,array,etc
 console.log(s1.length); //14
