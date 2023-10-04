@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+
+<body>
+    <script>
+                                                                //ES6
+            //let
+        let a = "Hello";
+            //const
+        const b = 2;
+    
+            //spread
+        let arr = [1, 2, 3]
+        let ar = [...arr, 4, 5, 6] //[1,2,3,4,5,6]
+    
+        let obj = {
+            name: "Sathesh"
+        }
+        let obj2 = {
+            ...arr,
+            ...obj,
+            age: 22
+        } // {0: 1, 1: 2, 2: 3, name: 'Sathesh', age: 22}
+    
+        var product = ["Stationary", "pen", "Ball Point", 15, "reynolds", "Ball Point", "Gel"];
+            //find() - when the condition is true this method will return first matching element
+        var result = product.find(function (ele) {
+            return ele == "Ball Point";
+        }); //'Ball Point'
+
+            //findIndex() - same as find but returns first Index 
+        var result = product.findIndex(function (ele) {
+            return ele == "Ball Point";
+        }); // 2
+
+            //filter() - same as find but returns all matches as store it in a array
+        var result = product.filter(function (ele) {
+            return ele == "Ball Point";
+        });  // [Ball Point, Ball Point]  
+            //map() - map is kind of loop but it will not have any condition or variable intialization
+        let arr2 = ar.map((i) => {
+            return i * 2
+        }) // [2, 4, 6, 8, 10, 12]
+            //Destructuring
+        let student = {
+            name: "sathesh",
+            age: 21,
+            city: "coimbatore"
+        }
+        let {name,age} = student;
+        console.log(name,age); // sathesh 21
+
+        let fruits = ['apple','mango','orange']
+        let[f1,f2] = fruits;
+        console.log(f1,f2); //apple mango
+    </script>
+
+</body>
+
+</html>

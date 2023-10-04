@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <button>remove</button>
+    <input type="button" value="clear">
+</body>
+<script>
+                            //Local Storage - browser storage it is in cache of the browser 10mb. To access it use localStorage property
+                            //setItem("key",value) - creates one item
+                            //getItem(key) - gets one item
+                            //removeItem("key") - removes only one item
+                            //clear() - clears local storage - clears total local storage
+
+    localStorage.setItem('name','sathesh')
+    localStorage.setItem('age',21)
+    localStorage.setItem('city','coimbatore')
+    console.log(localStorage.getItem('name')) // sathesh
+    document.querySelector('button').addEventListener('click',() => {
+        localStorage.removeItem('city') // removes city
+    })
+    document.querySelector('input').addEventListener('click',() => {
+        localStorage.clear();
+    })
+    
+</script>
+</html>
