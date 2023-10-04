@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BirthDay</title>
+    </head>
+    <body>
+        <input type="date" id="bdate">
+        <button onclick="bday(document.getElementById('bdate').value)">Click</button>
+        <script>
+            function bday(date){
+                var d = new Date(date);
+                document.write("Year "+d.getFullYear() + "<br/>");
+                document.write("Month "+d.getMonth() + "<br/>");
+                document.write("Date "+d.getDate() + "<br/>");
+            }
+        </script>
+    </body>
+</html>
