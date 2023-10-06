@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <script>
+        class Parent{
+            a = 2
+            hW(){
+                console.log('Parent class')
+            }
+        }
+        class Child extends Parent{
+            constructor(){
+                super()
+            }
+            disp(){
+                console.log('child ' + obj.a)
+                obj.hW()
+            }
+        }
+        let obj = new Child();
+        obj.hW()
+        obj.disp()
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <h1>Class</h1>
+    <script>
+        class Sample{
+            constructor(a){
+                this.a = a; //variable creation (same name should be given to variable and parameter)
+                console.log('hi '+a)
+            }
+            hW(){
+                document.body.innerText = 'Hello World!'
+            }
+        }
+        let obj = new Sample('n2') // hi n2
+        obj.hW();
+        let a = new Sample('Sathesh') // hi Sathesh
+        a.hW();
+    </script>
+</body>
+</html>
