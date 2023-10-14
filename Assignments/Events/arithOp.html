@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arithmetic operations</title>
+    </head>
+    <body>
+        <h1>Arithmetic operations</h1>
+        <p>
+            Enter first number : <input type="text" id="inp1"> <br/>
+            Enter second number : <input type="text" id="inp2"> <br/>
+            <button onclick="arithOP()">Perform Arithmetic operations</button>
+            <div id="arith"> 
+            </div>
+        </p>
+        <script>
+            function arithOP(){
+                var a = parseInt(document.getElementById("inp1").value);
+                var b = parseInt(document.getElementById("inp2").value);
+                
+                var c = [a+b,a-b,a*b,a/b]
+                // document.write(c);
+                document.getElementById("arith").textContent = c;
+            }
+        </script>
+    </body>
+</html>

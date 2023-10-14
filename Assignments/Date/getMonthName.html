@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Month name</title>
+</head>
+
+<body>
+    <h1>Get Month name from a date</h1>
+    <input type="date">
+    <script>
+        document.querySelector('input').addEventListener("change", () => {
+            let i = document.querySelector('input').value
+            console.log(i)
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            month = new Date(i)
+            document.body.append(`Month of the selected date is ${monthNames[month.getMonth()]}`)
+        })
+    </script>
+</body>
+
+</html>

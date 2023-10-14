@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listing user Input</title>
+    </head>
+    <body>
+        <h1>Listing User Inputs</h1>
+        <input type="text" id="input">
+        <button onclick="addInList()">Add</button>
+        <select id="sel">
+            <option>Select an option</option>
+        </select>
+        <script>
+            function addInList(){
+                var input = parseInt(document.getElementById("input").value);
+                if(Number.isInteger(input)){
+                    var opt = document.createElement("option");
+                    opt.textContent = input;
+                    document.getElementById("sel").appendChild(opt);
+                }
+            }
+
+            document.querySelector('#input').addEventListener("keyup",function(i){
+                console.log(i);
+                if(i.key == "Enter"){
+                    addInList();
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Age calculator</title>
+        <script>
+            function agecalc(){
+                var DOB = parseInt(document.getElementById("dob").value);
+                var future = 2060;
+
+                alert("You'll be "+(future-DOB-1)+" or "+(future-DOB)+" in year "+future);
+            }
+        </script>
+    </head>
+    <body>
+        <p>
+            Want to find out how old you'll be? <br/>
+            Enter your DOB:
+            <input type="number" id="dob">
+            <button onclick="agecalc()">Calculate it!</button>
+
+        </p>
+    </body>
+</html>

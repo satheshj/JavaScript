@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    
+</body>
+<script>
+    async function getData(){
+        let jsonData = await fetch('data.json')
+        let data = await jsonData.json()
+        console.log(data)
+        data.map((i)=>{
+            paraEl.innerHTML+=`firstname : ${i.firstName} <br/> `
+            paraEl.innerHTML+=`lastName : ${i.lastName}<br/>`
+            paraEl.innerHTML+=`DOB : ${i.dob}<br/>`
+            paraEl.innerHTML+=`Password : ${i.password}<br/>`
+        })
+    }
+    let paraEl = document.createElement('p')
+    document.body.appendChild(paraEl)
+    let buttonEl = document.createElement('button')
+    buttonEl.textContent = "Click this"
+    document.body.appendChild(buttonEl);
+    buttonEl.addEventListener('click',getData)
+</script>
+</html>

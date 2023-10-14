@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition of dates</title>
+</head>
+<body>
+    <h1>Addition in Dates</h1>
+    <label>Enter your Date: </label>
+    <input type="date" id="DOB"><br/>
+    <button onclick="genPass()">Generate</button><br/>
+    <script>
+        function genPass(){
+            var days = new Date((document.getElementById("DOB").value)).getDate();
+            var dayText = document.createTextNode(`Days + 5 is ${days+5} Days-5 is ${days-5}`);
+            document.body.appendChild(dayText);
+        }
+    </script>
+</body>
+</html>

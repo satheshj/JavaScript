@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem('Name',"Sathesh")
+        headEl = document.createElement('h1')
+        headEl.textContent = `Element from local storage is ${localStorage.getItem('Name')}`
+        document.body.appendChild(headEl)
+    </script>
+</body>
+</html>

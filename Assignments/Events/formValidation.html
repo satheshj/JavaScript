@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>form validation</title>
+    </head>
+    <body>
+        <section>
+            <p>
+                Enter first value : <input type="text" id="inp1"> <br/>
+                Enter second value : <input type="text" id="inp2"> <br/>
+                <button onclick="val(document.getElementById('inp1').value,document.getElementById('inp2').value)">Compare</button>
+
+            </p>
+        </section>
+        <script>
+            function val(a,b){
+                if((a.length == 0) || (b.length == 0)){
+                    alert("One of your data is empty, kindly fill it and try again 🙂🙂");
+                }
+                else{
+                    alert("Valid Input");
+                }
+            }
+        </script>
+    </body>
+</html>

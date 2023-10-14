@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Input</title>
+    </head>
+    <body>
+        <section>
+            <p>
+                Enter a input value: <input id="dispInp"><br/>
+                Click the below button to display your input <br/>
+                <button onclick="disp()">Display</button>
+            </p>
+        </section>
+        <script>
+            function disp(){
+                alert("Your input is "+(document.getElementById("dispInp").value));
+            }
+        </script>
+    </body>
+</html>

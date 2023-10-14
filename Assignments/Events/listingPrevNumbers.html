@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width initial-scale=1.0">
+    <title>Listing Previous numbers</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Listing previous Interger</h1>
+    <label>Value</label>
+    <input type="number" id="num">
+    <input type="button" onclick="genNum()" value="submit">
+    <label>Options</label>
+    <select id="select1">
+        <option>Select an integer</option>
+    </select>
+    <script>
+        function genNum() {
+            var a = document.getElementById('num').value;
+            for (var i = 1; i <= a; i++) {
+                var opt = document.createElement("option");
+                opt.textContent = i;
+                opt.value = i;
+                document.getElementById("select1").appendChild(opt);
+            }
+        }
+        document.querySelector('#num').addEventListener("keyup", function (i) {
+            console.log(i);
+            if (i.key == "Enter") {
+                genNum();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

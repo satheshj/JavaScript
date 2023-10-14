@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String length</title>
+</head>
+<body>
+    <label>Enter string and press enter</label>
+    <input type="text">
+    <script>
+        document.querySelector('input').addEventListener("keyup", function (i) {
+            let len = () => {
+                    console.log(document.querySelector('input').value.length)
+                    document.write(`The given string is of length ${document.querySelector('input').value.length}`)
+                }
+            if (i.key == "Enter") {
+                len()
+            }
+        });
+    </script>
+</body>
+</html>

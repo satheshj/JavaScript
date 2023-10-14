@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Traffic signal</title>
+        <style>
+            .Traffic-Light{
+                display: grid;
+                border: 2px solid black;
+                place-content: center;
+                line-height: 50px;
+                width: 220px;
+                background-color: black;
+                margin-left: auto;
+                margin-right: auto;
+                height: 700px;
+                border-radius: 30%;
+            }
+            .Red-Light{
+                height: 200px;
+                width: 200px;
+                background-color: #bbb;
+                border-radius: 50%;
+            }
+            .Yellow-Light{
+                height: 200px;
+                width: 200px;
+                background-color: #bbb;
+                border-radius: 50%;
+            }
+            .Green-Light{
+                height: 200px;
+                width: 200px;
+                background-color: #bbb;
+                border-radius: 50%;
+            }
+            .buttons{
+                display: flex;
+                justify-content: center;
+                column-gap: 5px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 220px;
+            }
+            body{
+                background-image:url(https://itbrief.co.nz/uploads/story/2021/10/12/GettyImages-1172887012.webp);
+                background-size: cover;
+                
+            }
+            button{
+                background-color: #bbb;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <center><h1>Traffic Light</h1></center>
+            <div class="Traffic-Light">
+                <div class="Red-Light"></div>
+                <div class="Yellow-Light"></div>
+                <div class="Green-Light"></div>
+            </div>
+            <br>
+            <div class="buttons">
+                <button onclick="red()" onmouseleave="release()">Red</button>
+                <button onclick="yellow()" onmouseleave="release()">Yellow</button>
+                <button onclick="green()" onmouseleave="release()">Green</button>
+            </div>
+        </main>
+        <script>
+            function release(){
+                document.getElementsByClassName("Red-Light")[0].style.background = "#bbb";
+                document.getElementsByClassName("Yellow-Light")[0].style.background = "#bbb";
+                document.getElementsByClassName("Green-Light")[0].style.background = "#bbb";
+            }
+            function red() {
+                document.getElementsByClassName("Red-Light")[0].style.background = "red";
+            }
+            function yellow() {
+                document.getElementsByClassName("Yellow-Light")[0].style.background = "yellow";
+            }
+            function green() {
+                document.getElementsByClassName("Green-Light")[0].style.background = "green";
+            }
+        </script>
+    </body>
+</html>

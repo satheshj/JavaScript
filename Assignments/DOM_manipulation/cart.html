@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cart</title>
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Add to cart</h1>
+        <input type="text" id="add_items">
+        <button onclick="addToCart()">Add</button><br/>
+        <p>My cart items</p>
+
+        <script>
+            function addToCart(){
+                var items = document.createTextNode(document.getElementById("add_items").value);
+                var cart = document.createElement("div");
+                document.body.appendChild(cart);
+                document.body.appendChild(items);
+            }
+        </script>
+    </body>
+</html>

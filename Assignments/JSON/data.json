@@ -1,0 +1,19 @@
+[{
+    "firstName" : "Sathesh",
+    "lastName" : "Jaganathan",
+    "dob" : "16-02-2002",
+    "password" : "sa16onesix"
+   
+},
+{
+    "firstName" : "Janani",
+    "lastName" : "Jaganathan",
+    "dob" : "26-10-2008",
+    "password" : "ja16onesix"
+},{
+    "firstName" : "Kalaivani",
+    "lastName" : "Jaganathan",
+    "dob" : "06-09-1980",
+    "password" : "ka16onesix"
+
+}]

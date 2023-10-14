@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width initial-scale=1.0">
+    <title>Listing Previous numbers</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Listing previous Interger</h1>
+    <label>Value</label>
+    <input type="number" id="num">
+    <input type="button" onclick="genNum()" value="submit">
+    <label>Select a value</label>
+    <select id="select1">
+        <option>Select an integer</option>
+    </select>
+    <label>Select repeat Count</label>
+    <select id="select2">
+
+    </select>
+    <button>Generate Forms</button>
+    <div>
+
+    </div>
+    <script>
+        function genNum() {
+            var a = document.getElementById('num').value;
+            for (var i = 1; i <= a; i++) {
+                var opt = document.createElement("option");
+                opt.textContent = i;
+                opt.value = i;
+                document.getElementById("select1").appendChild(opt);
+            }
+        }
+
+        document.querySelector('#num').addEventListener("keyup", function (i) {
+            console.log(i);
+            if (i.key == "Enter") {
+                genNum();
+            }
+        });
+
+        document.querySelector('#select1').addEventListener('change', function () {
+            var a1 = document.querySelector('#select1').value;
+            console.log(a1);
+            for (var i = 1; i <= a1; i++) {
+                var opt = document.createElement("option");
+                opt.textContent = i;
+                opt.value = i;
+                document.getElementById("select2").appendChild(opt);
+            }
+        })
+        document.querySelector('button').addEventListener('click', () => {
+            genUserPass(document.querySelector('#select2').value);
+        })
+        function genUserPass(a1) {
+            console.log(a1);
+            divEl = document.querySelector('div');
+            formEl = document.createElement('form');
+            for (var j = 1; j <= a1; j++) {
+                
+                
+                formEl.innerHTML += `Form ${j}: <label>User Name: </label><input type='text' placeholder='User name'></input><br/><label>Password :</label><input type='password' placeholder='Password'></input><br/><br/><br/>`;
+
+            }
+            divEl.appendChild(formEl);
+        }
+    </script>
+</body>
+
+</html>

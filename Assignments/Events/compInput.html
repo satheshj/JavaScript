@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comparison of two intergers</title>
+    </head>
+    <body>
+        <section>
+            <h1>Comparing two variables</h1>
+            Enter the first value : <input id="inp1"> <br/>
+            Enter the second value : <input id="inp2"> <br/>
+            <button onclick="comparingTwoValues()">Compare</button>
+        </section>
+        <script>
+            function comparingTwoValues(){
+                if((document.getElementById("inp1").value)==(document.getElementById("inp2").value)){
+                    alert("Both the data is equal");
+                }
+                else{
+                    alert("Both the values are not equal");
+                }
+            }
+        </script>
+    </body>
+</html>
